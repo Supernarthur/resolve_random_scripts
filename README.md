@@ -4,7 +4,7 @@ Small archive of python scripts leveraging DaVinci Resolve's python API
 ## Script list
 
 + `reset_tc` : Resets the timecode of all the clips in the current bin and its
-  subfolder to 00:00:00:00. Will prompt the user before doing the change.
+  subfolders to 00:00:00:00. Will prompt the user before doing the change.
   Surprisingly, this is something that you can undo with `Ctrl / Cmd + Z`, but
   clip by clip.
   Tested in version 18
