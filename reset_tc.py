@@ -114,9 +114,11 @@ def main():
         elif output.get("checkbox") == 0.0:
             print("Operation cancelled")
         elif output.get("checkbox") == 1.0:
-            for clip in clips:
+            for index, clip in enumerate(clips):
                 clip.SetClipProperty("Start TC", "00:00:00:00")
-                print("Reset TC to 00:00:00:00 for clip {}".format(clip.GetName()))
+                progress = round(100 * index / len(clips) , 2)
+                print("[{}%] Reset TC to 00:00:00:00 for clip {}".format(progress, clip.GetName()))
+            print("Done")
 
 if __name__ == "__main__":
     main()
